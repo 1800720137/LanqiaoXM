@@ -5,7 +5,7 @@ public  class  Test{
         Scanner sc=new Scanner(System.in);
         String username=sc.next();
         System.out.println("请输入密码");
-        String username=sc.next();
+        String passworld=sc.next();
 
     }
 }
