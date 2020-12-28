@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ReadExcel {
+public class ReadProductExcel {
     public User[] readExcel(File file) {
         User users[] = null;
         try {
