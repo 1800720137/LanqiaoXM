@@ -36,7 +36,6 @@ public class ReadUserExcel {
                 }
                 users[j-1] = user;
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,8 +44,8 @@ public class ReadUserExcel {
 
     private String getValue(XSSFCell cell) {
         String value;
-        CellType type = cell.getCellType();
-
+        CellType type = cell.getCellTypeEnum();
+        DecimalFormat df = new DecimalFormat("#");
         switch (type) {
             case STRING:
                 value = cell.getStringCellValue();
@@ -58,9 +57,8 @@ public class ReadUserExcel {
                 value = cell.getBooleanCellValue() + "";
                 break;
             case NUMERIC:
-                DecimalFormat df=new DecimalFormat("#");
-                value=df.format(cell.getNumericCellValue());
-                System.out.println("处理好的:"+value);
+                value = df.format(cell.getNumericCellValue());//double和一个空字符串相连接，最终得到字符串
+                System.out.println("转换后的："+value);
                 break;
             case FORMULA:
                 value = cell.getCellFormula();
