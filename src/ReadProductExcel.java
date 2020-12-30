@@ -36,8 +36,6 @@ public class ReadProductExcel {
                 }
                 products[j - 1] = product;
             }
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }

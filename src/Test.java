@@ -35,9 +35,7 @@ public class Test {
                     System.out.println("请输入商品ID把该商品加入购物车");
                     String pId = sc.next();
                     int count = 0;
-                    /*
-                    创建一个购物车的数组：存的是商品
-                     */
+
                     Product carts[] = new Product[3];
                     /*
                     根据此ID去Excel中去查找是否有该ID的商品信息，如果有则返回该商品即可
@@ -73,9 +71,15 @@ public class Test {
                             carts[count++]=product;
                         }
                     }else if(choose==2){
-                        /*
-                        查看购物车
-                         */
+                   System.out.println("当前购物车商品如下：");
+                   for ( Product p : carts);{
+                   if (password!=null) {
+                       System.out.println(product.getId());
+                       System.out.println("\t" + product.getName());
+                       System.out.println("\t" + product.getPrice());
+                       System.out.println("\t" + product.getDesc());
+                            }
+                        }
                     }
                     break;
                 } else {
